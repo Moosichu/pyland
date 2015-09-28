@@ -64,8 +64,6 @@ class Character(GameObject, ScriptStateContainer):
 
     __keys = 0
 
-    __script = "" #The script that the NPC stores (for when the player is writing scripts for them)
-
     def initialise(self):
         super().initialise
         self.set_solidity(True)
@@ -130,7 +128,7 @@ class Character(GameObject, ScriptStateContainer):
             #the method to get the position of the player
             script_api["get_position"] = self.get_position
 
-            script_api["yell"] = self.__yell
+            script_api["yell"] = self.yell
             script_api["cut"] = scriptrunner.make_blocking(self.__cut)
             script_api["get_cuts_left"] = self.__get_cuts_left
 
@@ -155,20 +153,6 @@ class Character(GameObject, ScriptStateContainer):
         """ Sets the character name to the name of the object
         """
         self.set_character_name(self)
-
-    def set_script(self, script):
-        """ Sets the character's script to be the text 'script'
-        """
-        self.__script = script
-
-    def get_script(self):
-        """
-        Returns
-        -------
-        str
-            A string of the player's script text
-        """
-        return self.__script
 
     def get_character_name(self):
         """
@@ -467,10 +451,9 @@ class Character(GameObject, ScriptStateContainer):
         callback : func, optional
             Places the callback onto the engine event-queue
         """
-        if not self.is_busy():
-            face_x()
-            self.start_animating()
-            parent_move_x(lambda: self.__stop_animating_func(callback))
+        face_x()
+        self.start_animating()
+        parent_move_x(lambda: self.__stop_animating_func(callback))
         return
 
     def __stop_animating_func(self, callback = lambda : None):
@@ -778,7 +761,7 @@ class Character(GameObject, ScriptStateContainer):
                     break
         return message
 
-    def __yell(self):
+    def yell(self):
         """ Loops through all the GameObjects and if they have a yelled_at() function runs it.
 
         This is used for when you yell at crocodiles/anything else that can get yelled at

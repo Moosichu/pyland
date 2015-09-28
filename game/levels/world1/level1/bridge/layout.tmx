@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="29" height="75" tilewidth="64" tileheight="64" nextobjectid="236">
+<map version="1.0" orientation="orthogonal" width="25" height="30" tilewidth="64" tileheight="64">
  <tileset firstgid="1" name="water" tilewidth="64" tileheight="64">
   <image source="../../../../tiles/water.png" width="320" height="1216"/>
  </tileset>
@@ -21,47 +21,47 @@
  <tileset firstgid="571" name="special" tilewidth="64" tileheight="64">
   <image source="../../../../tiles/special.png" width="320" height="1216"/>
  </tileset>
- <tileset firstgid="666" name="intro" tilewidth="64" tileheight="64">
-  <image source="../../../../tiles/intro.png" width="320" height="1216"/>
+ <tileset firstgid="666" name="house" tilewidth="64" tileheight="64">
+  <image source="../../../../tiles/house.png" width="320" height="640"/>
  </tileset>
- <layer name="Ground" width="29" height="75">
+ <layer name="Ground" width="25" height="30">
   <data encoding="base64" compression="zlib">
-   eJztwwEJAAAMA6BFXf8UzzGuYJNUVVVVVVV1NADAdwd1u1Y/
+   eJztw0ENAAAMA6GTWv8qZmMPSFg1VVX19QOR5hlQ
   </data>
  </layer>
- <layer name="Decor" width="29" height="75">
+ <layer name="Water" width="25" height="30">
   <data encoding="base64" compression="zlib">
-   eJztWNtyAiEMTa267Wi1L/YL+nHbF///sctIxpgSCJCVupKZM7tyyUlCFiFnADgX4Pvl+g7CGKld6uNtQJ5USuzVIEe0voLQT2UUOELtIR2lfoX0jwre3FjmxFfDDZDWV7quEqdWTw3nnPI+YUhg68fG+mK639icjwmnBA5+bKwvBI3uZ8OXR6yPYw4uzdxTJX+pfUvjzIn3Ujhrc/e/xsvye9Tqs45l632ldk96dFjs7a3WvnW8LHPnOGG6IsGngX3a9jVczs87A1+0890ZzZ37as9jMT66NqnzjRWnRU6l8m0O3hb+1ubQPWNAsZrZT2zHvYB+nxZ5IZ01Hd8rXO6hjmtgHJbxRt+Qz90FrfYCydYN3N7Lcb+r2ctDaxLyD+/2e98ewirRjs+9YOvac2hrHThGqrvwWtGO+IX/UZibWj6uP1X/cb7SGOLv0YiP14Z+AvNpbUlb15E4RvjLGbNHY3NOba1UB7B3yd9cm7TcnOeRcS9flhKv1ujSpUuXLl26dHl2+QUFkvLk
+   eJztVNEOgyAMrHMbLmGbL/L/nzpIIOlqoYVuDyY2uahA764FBDjjSPGIWDJcxP0P/M+IDeE1qFO8Ovj2TPmxjgN9XS2ugkCeGFeFRi2XG6vVJNWi4ZG0JZ1afuioJeE2oNGLVi2cb6rVqgmPl/NGtUZ9SzWVe+CUfbL0UDr7Up7ljNS0uX3SzI3oWnqm5bB4tvxTRvZDy2/t3y/8prVTxMp4svijuSk80uHwjrhkP1N+X2HvFc/jbyA6AfGWNTPswyM+br4WHnnoyTvjWPEBL5sgFg==
   </data>
  </layer>
- <layer name="Bridge" width="29" height="75">
+ <layer name="Decor" width="25" height="30">
   <data encoding="base64" compression="zlib">
-   eJztz9EJgDAMQMHSxfxzkqzsPlIo1B9BEaLSOwihUHikFIDnNk1NTU1NTU3NiZvRm9Ens5vRjMN+487WXOp4r/X0q6bm5WZG9wt3av63CQAAAHfsRxkktA==
+   eJztVlsOhCAQ47QoP57Wvc/Gj8nWZh5lNZtsYhMShKHtCOK09sHmtCUYrxoji4nmVA8cO4C7U398mZvFIjdiFfLlnKNY5EP/EXhth+fIV+U/05nxgngJGhUqn5XGMb9DQ05711kOqkYGPleKT26ZxgBeZc8iKHkYlPMzq2He+wX+SoMRfW9X9kPFHRyPxv9p3H2OFM1H4zcayr11aER1hceHdxTewTO1CY8PmrO+V2NZ39bwnTnauRZhrs2J8/i9f9fqxKJvpSZdWlz7IdSaMPOe5ePNsS/LmeuFN57Kdrs=
   </data>
  </layer>
- <objectgroup name="Object Layer 1">
-  <object id="218" name="characters/player/player_one" gid="286" x="896" y="3072" width="64" height="64"/>
-  <object id="219" name="characters/enemies/crocodiles/green_crocodile/croc_1" gid="296" x="1344" y="2240" width="64" height="64"/>
-  <object id="220" name="characters/enemies/crocodiles/green_crocodile/croc_2" gid="296" x="1472" y="1216" width="64" height="64"/>
-  <object id="221" name="characters/enemies/crocodiles/green_crocodile/croc_3" gid="296" x="704" y="896" width="64" height="64"/>
-  <object id="222" name="characters/enemies/crocodiles/green_crocodile/croc_5" gid="296" x="256" y="1408" width="64" height="64"/>
-  <object id="223" name="characters/enemies/crocodiles/green_crocodile/croc_6" gid="296" x="1152" y="1664" width="64" height="64"/>
-  <object id="224" name="characters/enemies/crocodiles/green_crocodile/croc_7" gid="296" x="512" y="1088" width="64" height="64"/>
-  <object id="225" name="characters/enemies/crocodiles/green_crocodile/croc_8" gid="296" x="512" y="1728" width="64" height="64"/>
-  <object id="226" name="characters/enemies/crocodiles/green_crocodile/croc_9" gid="296" x="1216" y="1344" width="64" height="64"/>
-  <object id="227" name="characters/npcs/heidi/heidi" gid="286" x="832" y="2816" width="64" height="64"/>
-  <object id="228" name="tile_trigger/croc_warning" gid="292" x="896" y="2496" width="64" height="64"/>
-  <object id="229" name="tile_trigger/made_it" gid="292" x="896" y="576" width="64" height="64"/>
-  <object id="230" name="tile_trigger/end" gid="292" x="896" y="64" width="64" height="64"/>
-  <object id="231" name="player_data/player_data" gid="287" x="448" y="3072" width="64" height="64"/>
-  <object id="232" name="camera/camera" gid="679" x="896" y="4608" width="64" height="64"/>
-  <object id="233" name="tile_trigger/heidi_talk" gid="292" x="896" y="2816" width="64" height="64"/>
-  <object id="234" name="characters/npcs/myla/myla" gid="286" x="1792" y="64" width="64" height="64"/>
-  <object id="235" name="pyscripter/pyscripter" gid="287" x="896" y="384" width="64" height="64"/>
+ <layer name="SpecialLayer" width="25" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztllEKwCAMQ8Vzbfe/1j43uqRJpR8yVhAEbV9TRTvGbcfsG9GyPWytwlJ8xFrV7JjyzfRnds73yGrK8qrEjxxXd/RX8dH+ai0Uw7FMg8vIuPG8V/Nkfuh+V+qudD51qHxWGey+dTNQvTvPozvPn/E9Rvc92kXX7gz3Xeg4X7VHvXPM4p/v+LG+AMVDf0mco1hxjfVsmRaWK2IwnmOs91rt/RQLzat2Ac0KgDA=
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1" width="25" height="30">
+  <object name="characters/player/player_one" gid="286" x="512" y="1920"/>
+  <object name="tile_trigger/exit_to_village_east" gid="292" x="576" y="1984"/>
+  <object name="tile_trigger/exit_to_village_west" gid="292" x="512" y="1984"/>
+  <object name="sign/village_sign" gid="288" x="640" y="1792"/>
+  <object name="sign/bog_sign" gid="288" x="1280" y="256"/>
+  <object name="characters/npcs/heidi/heidi" gid="291" x="1536" y="1920"/>
+  <object name="tile_trigger/exit_to_bridge_end" gid="292" x="1600" y="448"/>
+  <object name="player_data/player_data" gid="287" x="0" y="64"/>
+  <object name="tile_trigger/no_potion" gid="292" x="1152" y="256"/>
+  <object name="totem/totem_1" gid="298" x="128" y="256"/>
+  <object name="characters/enemies/crocodiles/green_crocodile/croc_0" gid="296" x="640" y="576" width="64" height="64"/>
+  <object name="characters/enemies/crocodiles/green_crocodile/croc_1" gid="296" x="448" y="960" width="64" height="64"/>
+  <object name="characters/enemies/crocodiles/green_crocodile/croc_2" gid="296" x="896" y="1472" width="64" height="64"/>
+  <object name="characters/enemies/crocodiles/green_crocodile/croc_3" gid="296" x="192" y="1408" width="64" height="64"/>
+  <object name="characters/enemies/crocodiles/green_crocodile/croc_4" gid="296" x="64" y="1088" width="64" height="64"/>
+  <object name="characters/enemies/crocodiles/green_crocodile/croc_5" gid="296" x="512" y="704" width="64" height="64"/>
+  <object name="tile_trigger/heidi_chicken_out" gid="292" x="576" y="1536"/>
+  <object name="tile_trigger/heidi_totem_warning" gid="292" x="704" y="640"/>
  </objectgroup>
- <layer name="SpecialLayer" width="29" height="75">
-  <data encoding="base64" compression="zlib">
-   eJztmFsKhDAMRcVt6ex/W1JEKKGN15jpMHouBB+NOUnsT7PO07QGrKh13/NR1uy749kqkq9akyq11rqGKKvHVfuRoTu9zKzZ2xe9bzKYapzMnmfqM2vm+Z7FvsLJMpgwYcKECRMmTJgwYcKEuZ9Dy3UZzBvBrM/lo5n1P/wWs0iddRw+vbmLnRV5TJVn45/Nf2wPW3Xe4bXmcGqsq0y75uWm5K3W5vln9SeaU3Qm+M82qpan9OvXhhBCCCH0dm1U30kT
-  </data>
- </layer>
 </map>
