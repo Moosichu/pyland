@@ -7,6 +7,13 @@ import subprocess
 import sys
 import getopt
 
+WINDOWS = False
+LINUX = False
+if(os.name == "nt"):
+	WINDOWS = True
+else:
+	LINUX = True
+
 def mkdir(directory):
     if not os.path.exists(directory):
         os.makedirs(directory)
@@ -47,24 +54,27 @@ if not (compiler and python_version):
     print("eg. ~$ python3.4 build.py -c \"clang++-3.6\"")
     sys.exit(2)
 
-compile_string = platform + "COMPILER=" + compiler + " PYTHON_VERSION=" + python_version + " LIBBOOST_PYTHON=boost_python-py" + python_version.replace(".", "") + " make" + jobs
+if(WINDOWS):
+	compile_string = "set COMPILER=" + compiler + " set PYTHON_VERSION=" + python_version + " set LIBBOOST_PYTHON=boost_python-py" + python_version.replace(".", "") + " make" + jobs
+else:
+	compile_string = platform + "COMPILER=" + compiler + " PYTHON_VERSION=" + python_version + " LIBBOOST_PYTHON=boost_python-py" + python_version.replace(".", "") + " make" + jobs
 print(compile_string)
 
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
 mkdir("game/jsonnet") #TODO: move this to the makefile!!!
 mkdir("game/python_embed")
 
-os.system("rm game/database.db")
+os.system("rm game\database.db")
 print("Building database.db...")
-os.system("sqlite3 game/database.db < game/database_source.sql")
+if(WINDOWS):
+	os.system("call windows\sqlite3.exe game\database.db < game\database_source.sql")
+else:
+	os.system("sqlite3 game/database.db < game/database_source.sql")
 print("Finished building database.db...")
 os.chdir("src")
 print("Compiling using make...")
 print(compile_string)
-if(os.name == "nt"):
-    print("I am on windows")
-else:
-    os.system(compile_string)
+os.system(compile_string)
 print("Finished compiling using make...")
 os.chdir("..")
 print("Copying jsonnet...")
