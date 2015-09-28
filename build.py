@@ -61,7 +61,10 @@ print("Finished building database.db...")
 os.chdir("src")
 print("Compiling using make...")
 print(compile_string)
-os.system(compile_string)
+if(os.name == "nt"):
+    print("I am on windows")
+else:
+    os.system(compile_string)
 print("Finished compiling using make...")
 os.chdir("..")
 print("Copying jsonnet...")
